@@ -1,0 +1,5 @@
+*transient_response
+.include ../AE01.20.01.003.cir
+.tran 0 2m 0
+.backanno
+.op

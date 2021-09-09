@@ -1,0 +1,18 @@
+.title KiCad schematic
+.include "models/B140HB.spice.txt"
+.include "models/ZR431.spice.txt"
+.include "models/ps2501a.lib"
+R1 /FEEDBACK 0 470
+R2 /K /VZ 200
+R4 /VOUT /VREF 10k
+R5 /VREF 0 10k
+R6 /VOUT 0 100
+C2 /VOUT 0 10u
+C1 /VZ /COMP 1n
+XU2 /VZ /VREF 0 ZR431
+XU1 /VOUT /K /FEEDBACK VDD PS2501A
+D1 VCC /VOUT DI_B140HB
+R3 /COMP /VREF 100
+V1 VCC 0 PWL (0 1 1m 5.5 2m 5.5)
+V2 VDD 0 5
+.end
